@@ -5,21 +5,30 @@
  * See: https://expressjs.com/en/guide/using-middleware.html#middleware.router
  */
 
+const hits = [
+  { objectID: 1, title: "Google", url: "http://google.ca" },
+  { objectID: 2, title: "Amazon", url: "http://amazon.ca" },
+];
+
 const express = require('express');
 const router  = express.Router();
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
-    db.query(`SELECT * FROM users;`)
-      .then(data => {
-        const users = data.rows;
-        res.json({ users });
-      })
-      .catch(err => {
-        res
-          .status(500)
-          .json({ error: err.message });
-      });
+
+    // db.query(`SELECT * FROM users;`)
+    //   .then(data => {
+    //     const users = data.rows;
+    //     res.json({ users });
+    //   })
+    //   .catch(err => {
+    //     res
+    //       .status(500)
+    //       .json({ error: err.message });
+    //   });
+
+    res.json({hits});
+
   });
   return router;
 };
