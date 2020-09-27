@@ -62,10 +62,10 @@ CREATE TABLE events
 (
   id SERIAL PRIMARY KEY NOT NULL,
   location TEXT,
-  time TIMESTAMPTZ NOT NULL,
+  date_time TIMESTAMPTZ NOT NULL,
   short_description TEXT,
   link VARCHAR(255),
-  -- mammal_id INTEGER REFERENCES mammals(id),
+  mammal_id INTEGER REFERENCES mammals(id),
   sponsor_id INTEGER REFERENCES sponsors(id),
   veterinarian_id INTEGER
 );
