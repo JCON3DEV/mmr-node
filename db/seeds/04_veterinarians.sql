@@ -14,3 +14,7 @@ INSERT INTO veterinarians
   (staff_name,bio,years_of_experience)
 VALUES
   (Davie,"Davie is a vet bla bla", 6);
+INSERT INTO veterinarians
+  (staff_name,bio,years_of_experience)
+VALUES
+  (Emily,"Emily is a vet bla bla", 7);
