@@ -1,4 +1,4 @@
--- Drop and recreate Users table (Example)
+-- Drop and recreate
 
 DROP TABLE IF EXISTS sponsors
 CASCADE;
@@ -19,12 +19,13 @@ CASCADE;
 DROP TABLE IF EXISTS events_veterinarians
 CASCADE;
 
+
 CREATE TABLE sponsors
 (
   id SERIAL PRIMARY KEY NOT NULL,
   sponsor_name VARCHAR(255) NOT NULL,
   phone_number VARCHAR(255) NOT NULL,
-  sponsored_mammals_id INTEGER REFERENCES sponsored_mammals(id),
+  -- sponsors_mammals_id INTEGER REFERENCES sponsors_mammals(mammals_id),
   email VARCHAR(255) NOT NULL
 );
 
@@ -32,6 +33,7 @@ CREATE TABLE mammals
  (
   id SERIAL PRIMARY KEY NOT NULL,
   mammal_name VARCHAR(255) NOT NULL,
+  -- sponsors_mammals_id INTEGER REFERENCES sponsors_mammals(sponsor_id),
   age INTEGER,
   weight DECIMAL(6,2),
   bio TEXT,
@@ -52,7 +54,8 @@ CREATE TABLE veterinarians
   id SERIAL PRIMARY KEY NOT NULL,
   staff_name VARCHAR(255) NOT NULL,
   bio TEXT,
-  years_of_experience INTEGER
+  years_of_experience INTEGER,
+  staff_img VARCHAR (255) NOT NULL
 );
 
 CREATE TABLE events
@@ -62,7 +65,7 @@ CREATE TABLE events
   time TIMESTAMPTZ NOT NULL,
   short_description TEXT,
   link VARCHAR(255),
-  mammal_id INTEGER REFERENCES mammals(id),
+  -- mammal_id INTEGER REFERENCES mammals(id),
   sponsor_id INTEGER REFERENCES sponsors(id),
   veterinarian_id INTEGER
 );
