@@ -6,3 +6,7 @@ INSERT INTO sponsors
   (sponsor_name, phone_number,email)
 VALUES
   ('Christy', 16044564567, 'christy@email.com');
+INSERT INTO sponsors
+  (sponsor_name, phone_number,email)
+VALUES
+  ('Jordan', 16044564588, 'jordan@email.com');
