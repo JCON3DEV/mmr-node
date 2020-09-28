@@ -27,6 +27,7 @@ module.exports = (db) => {
 
   });
   router.get("/:id/map", function (req, res, next) {
+    // db.query to go here
     res.json("API is working properly");
   });
 

@@ -47,5 +47,21 @@ module.exports = (db) => {
     res.json({ alfonso });
 
   });
+
+  router.get("/:id", function (req, res, next) {
+    // db.query to go here to get individual mammal
+    // note should return an object not a string
+    res.json("API showing individual mammal");
+  });
+
+  router.get("/:id/:url", function (req, res, next) {
+    // db.query to go here to get videos linked to each mammal
+    res.json("API showing video feed for each associated mammal");
+  });
+
+  router.get("/:id/events", function (req, res, next) {
+    // db.query to go here to get events linked to each mammal
+    res.json("API showing events for specific mammal");
+  });
   return router;
 };
