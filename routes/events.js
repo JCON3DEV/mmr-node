@@ -12,18 +12,19 @@ const router = express.Router();
 module.exports = (db) => {
   router.get("/", (req, res) => {
 
-    // db.query(`SELECT * FROM users;`)
-    //   .then(data => {
-    //     const users = data.rows;
-    //     res.json({ users });
-    //   })
-    //   .catch(err => {
-    //     res
-    //       .status(500)
-    //       .json({ error: err.message });
-    //   });
+    db.query(`SELECT * FROM events;`)
+      .then(data => {
+        console.log("This is events query data...",data);
+        const events = data.rows;
+        res.json({ events });
+      })
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: err.message });
+      });
 
-    res.json({ litterPick });
+    // res.json({ litterPick });
 
   });
   router.get("/:id/map", function (req, res, next) {
