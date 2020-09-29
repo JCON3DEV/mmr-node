@@ -1,12 +1,17 @@
 INSERT INTO sponsors
-  (sponsor_name, phone_number,email)
+  (id,sponsor_name, phone_number,email)
 VALUES
-  ('Serah', 16041231234, 'serah@email.com');
+  (1,'Serah', 16041231234, 'serah@email.com');
 INSERT INTO sponsors
-  (sponsor_name, phone_number,email)
+  (id,sponsor_name, phone_number,email)
 VALUES
-  ('Christy', 16044564567, 'christy@email.com');
+  (2,'Christy', 16044564567, 'christy@email.com');
 INSERT INTO sponsors
-  (sponsor_name, phone_number,email)
+  (id,sponsor_name, phone_number,email)
 VALUES
-  ('Jordan', 16044564588, 'jordan@email.com');
+  (3,'Jordan', 16044564588, 'jordan@email.com');
+INSERT INTO sponsors
+  (id,sponsor_name, phone_number,email)
+VALUES
+  (4,'Lisa', 16044564588, 'lisa
+  @email.com');

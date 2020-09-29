@@ -1,0 +1,8 @@
+--sponsor:
+--query all mammals
+--query for all info about 1 seal
+-- query all mammals for a sponsor id
+-- query all events for a mammal id
+--query all
+--query all the mammals for one admin id
+--
