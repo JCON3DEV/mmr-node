@@ -1,3 +1,6 @@
+/*
+ * All routes for events are defined here
+ */
 const litterPick = {
   location: "Woking",
   date_time: "2020-10-15 12:00",

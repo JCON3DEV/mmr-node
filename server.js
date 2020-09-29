@@ -37,6 +37,7 @@ const mammalsRoutes = require("./routes/mammals");
 const sponsorsRoutes = require("./routes/sponsors");
 const eventsRoutes = require("./routes/events");
 const veterinariansRoutes = require("./routes/veterinarians");
+const adminsRoutes = require("./routes/admins");
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -44,6 +45,7 @@ app.use("/api/mammals", mammalsRoutes(db));
 app.use("/api/sponsors", sponsorsRoutes(db));
 app.use("/api/events", eventsRoutes(db));
 app.use("/api/veterinarians", veterinariansRoutes(db));
+app.use("/api/admins", adminsRoutes(db));
 // Note: mount other resources here, using the same pattern above
 
 

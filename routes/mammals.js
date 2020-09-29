@@ -33,18 +33,18 @@ const router  = express.Router();
 module.exports = (db) => {
   router.get("/", (req, res) => {
 
-    // db.query(`SELECT * FROM users;`)
-    //   .then(data => {
-    //     const users = data.rows;
-    //     res.json({ users });
-    //   })
-    //   .catch(err => {
-    //     res
-    //       .status(500)
-    //       .json({ error: err.message });
-    //   });
+    db.query(`SELECT * FROM mammals;`)
+      .then(data => {
+        const mammals = data.rows;
+        res.json({ mammals });
+      })
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: err.message });
+      });
 
-    res.json({ alfonso });
+    // res.json({ alfonso });
 
   });
 
@@ -58,10 +58,12 @@ module.exports = (db) => {
     // db.query to go here to get videos linked to each mammal
     res.json("API showing video feed for each associated mammal");
   });
-
+  // localhost/api/mammals/id/events_id
   router.get("/:id/events", function (req, res, next) {
     // db.query to go here to get events linked to each mammal
     res.json("API showing events for specific mammal");
   });
+
+
   return router;
 };
