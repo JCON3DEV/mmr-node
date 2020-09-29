@@ -1,15 +1,15 @@
 INSERT INTO mammals
-  (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic)
+  (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic, sponsored)
 VALUES
-  ('Boris',4,120, 'Boris is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','Boris.png, Boris1.png, Boris2.png, Boris3.png, Boris4.png');
+  ('Boris',4,120, 'Boris is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','Boris.png, Boris1.png, Boris2.png, Boris3.png, Boris4.png', true);
 INSERT INTO mammals
   (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic)
 VALUES
-  ('Alfonso',4,120, 'Alfonso is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','Alfonso.png, Alfonso1.png, Alfonso2.png, Alfonso3.png, Alfonso4.png');
+  ('Alfonso',4,120, 'Alfonso is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','Alfonso.png, Alfonso1.png, Alfonso2.png, Alfonso3.png, Alfonso4.png', true);
 INSERT INTO mammals
   (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic)
 VALUES
-  ('Beau',4,120, 'Beau is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','Beau.png, Beau1.png, Beau2.png,Beau3.png, Beau4.png');
+  ('Beau',4,120, 'Beau is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','Beau.png, Beau1.png, Beau2.png,Beau3.png, Beau4.png', true);
 INSERT INTO mammals
   (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic)
 VALUES

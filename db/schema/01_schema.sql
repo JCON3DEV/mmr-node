@@ -39,7 +39,8 @@ CREATE TABLE mammals
   bio TEXT,
   date_admitted TIMESTAMPTZ NOT NULL,
   date_released TIMESTAMPTZ NOT NULL,
-  profile_pic VARCHAR(255) NOT NULL
+  profile_pic VARCHAR(255) NOT NULL,
+  sponsored BOOLEAN DEFAULT FALSE
 );
 
 CREATE TABLE sponsors_mammals
