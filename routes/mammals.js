@@ -47,6 +47,22 @@ module.exports = (db) => {
     // res.json({ alfonso });
 
   });
+  //  WORK IN POROGRESS TO BE COMPLETED
+  router.get("/unsponsored", function (req, res, next) {
+    let query = `SELECT * FROM mammals WHERE sponsored=false`;
+    // db.query to get unsponsored mammals
+    db.query(query)
+      .then((data) => {
+        const mammals = data.rows;
+        console.log("---------------------->",mammals);
+        res.json({ mammals });
+      })
+      .catch((err) => {
+        res.status(500).json({ error: err.message });
+      });
+    // res.json("API showing unsponsored mammal");
+  });
+
 
   router.get("/:id", function (req, res, next) {
     // db.query to go here to get individual mammal
