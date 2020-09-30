@@ -46,17 +46,23 @@ module.exports = (db) => {
   })
 
   router.get("/:id/mammals", (req, res) =>{
-    // below needs query to return mamals based on sponsor id
-    let query = ``;
-    // db.query(query)
-    //   .then((data) => {
-    //     const sponsor = data.rows.id;
-    //     res.json({ sponsor });
-    //   })
-    //   .catch((err) => {
-    //     res.status(500).json({ error: err.message });
-    //   });
-    res.json("API is working properly. Need query for mammals based on sponsor id.");
+    // below returns the sponsored mammals based on sponsor id
+    console.log("req.params *******", req.params);
+    let query = `
+    SELECT * FROM mammals
+    JOIN sponsors ON mammals.id = sponsors.id
+    WHERE sponsors.id = ${req.params.id};
+    `;
+    db.query(query)
+      .then((data) => {
+        const mammals = data.rows;
+        console.log("this is data --------->", mammals);
+        res.json({ mammals });
+      })
+      .catch((err) => {
+        res.status(500).json({ error: err.message });
+      });
+    // res.json("API is working properly. Need query for mammals based on sponsor id.");
   })
 
 
