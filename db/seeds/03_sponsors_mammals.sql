@@ -2,19 +2,19 @@ INSERT INTO sponsors_mammals (mammal_id,sponsor_id)
 VALUES (1,1);
 
 INSERT INTO sponsors_mammals (mammal_id,sponsor_id)
-VALUES (1,2);
+VALUES (4,1);
 
 INSERT INTO sponsors_mammals (mammal_id,sponsor_id)
-VALUES (1,3);
+VALUES (3,3);
 
 INSERT INTO sponsors_mammals (mammal_id,sponsor_id)
 VALUES (1,4);
 
 INSERT INTO sponsors_mammals (mammal_id,sponsor_id)
-VALUES (2,1);
+VALUES (2,2);
 
 INSERT INTO sponsors_mammals (mammal_id,sponsor_id)
-VALUES (2,1);
+VALUES (3,2);
 
 INSERT INTO sponsors_mammals (mammal_id,sponsor_id)
-VALUES (2,1);
+VALUES (5,2);

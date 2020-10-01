@@ -1,7 +1,7 @@
 INSERT INTO mammals
   (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic, sponsored)
 VALUES
-  ('Boris',4,120, 'Boris is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','/images/Alfonso1.png', true);
+  ('Boris',4,120, 'Boris is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','/images/Boris.png', true);
 INSERT INTO mammals
   (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic, sponsored)
 VALUES
@@ -13,11 +13,11 @@ VALUES
 INSERT INTO mammals
   (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic, sponsored)
 VALUES
-  ('Blue',4,120, 'Blue is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','/images/Blue1.png', false);
+  ('Blue',4,120, 'Blue is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','/images/Blue1.png', true);
 INSERT INTO mammals
   (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic, sponsored)
 VALUES
-  ('Dr.Bonnie Herring',4,120, 'Dr.Bonnie Herring is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','/images/Dr.Bonnie Herring2.png', false);
+  ('Dr.Bonnie Herring',4,120, 'Dr.Bonnie Herring is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','/images/Dr.Bonnie Herring2.png', true);
 INSERT INTO mammals
   (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic, sponsored)
 VALUES
@@ -29,7 +29,7 @@ VALUES
 INSERT INTO mammals
   (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic, sponsored)
 VALUES
-  ('Penner',4,120, 'Penner is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','/images/Penner.png', true);
+  ('Penner',4,120, 'Penner is the cutest','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','/images/Penner.png', false);
 INSERT INTO mammals
   (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic, sponsored)
 VALUES

@@ -49,9 +49,9 @@ module.exports = (db) => {
     // below returns the sponsored mammals based on sponsor id
     console.log("req.params *******", req.params);
     let query = `
-    SELECT * FROM mammals
-    JOIN sponsors ON mammals.id = sponsors.id
-    WHERE sponsors.id = ${req.params.id};
+    SELECT * FROM sponsors_mammals
+    INNER JOIN mammals ON mammals.id = sponsors_mammals.mammal_id
+    WHERE sponsor_id = ${req.params.id};
     `;
     db.query(query)
       .then((data) => {
