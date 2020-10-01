@@ -17,7 +17,7 @@ module.exports = (db) => {
 
     db.query(`SELECT * FROM events;`)
       .then(data => {
-        console.log("This is events query data...",data);
+        console.log("This is events query data...*****....",data);
         const events = data.rows;
         res.json({ events });
       })

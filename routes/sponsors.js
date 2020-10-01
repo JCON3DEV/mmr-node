@@ -47,7 +47,7 @@ module.exports = (db) => {
 
   router.get("/:id/mammals", (req, res) =>{
     // below returns the sponsored mammals based on sponsor id
-    console.log("req.params *******", req.params);
+    // console.log("req.params *******", req.params);
     let query = `
     SELECT * FROM sponsors_mammals
     INNER JOIN mammals ON mammals.id = sponsors_mammals.mammal_id
@@ -56,7 +56,7 @@ module.exports = (db) => {
     db.query(query)
       .then((data) => {
         const mammals = data.rows;
-        console.log("this is data --------->", mammals);
+        // console.log("this is data --------->", mammals);
         res.json({ mammals });
       })
       .catch((err) => {
