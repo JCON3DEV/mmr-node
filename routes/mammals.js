@@ -63,11 +63,18 @@ module.exports = (db) => {
     // res.json("API showing unsponsored mammal");
   });
 
-
-  router.get("/:id", function (req, res, next) {
+  // This request below is populated by useParams on the front end
+  router.get(`/:mammal_id`, function (req, res, next) {
     // db.query to go here to get individual mammal
-    // note should return an object not a string
-    res.json("API showing individual mammal");
+    // Protect against SQL injection below
+    db.query(`SELECT * FROM mammals WHERE id = ${req.params.mammal_id};`)
+      .then((data) => {
+        const mammals = data.rows;
+        res.json({ mammals });
+      })
+      .catch((err) => {
+        res.status(500).json({ error: err.message });
+      });
   });
 
   router.get("/:id/:url", function (req, res, next) {
