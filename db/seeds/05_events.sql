@@ -11,7 +11,7 @@ VALUES
 INSERT INTO events
   (location,date_time,short_description,link,mammal_id,sponsor_id,veterinarian_id)
 VALUES
-   ('Gar Point Park or Online','2020-10-08 10:00:16-00','Litter pick around the coastline','www.cleanbeaches.com',0,2,3);
+   ('Gar Point Park or Online','2020-10-08 10:00:16-00','Litter pick around the coastline','www.cleanbeaches.com',null,2,3);
 
 INSERT INTO events
   (location,date_time,short_description,link,mammal_id,sponsor_id,veterinarian_id)
@@ -26,12 +26,12 @@ VALUES
 INSERT INTO events
   (location,date_time,short_description,link,mammal_id,sponsor_id,veterinarian_id)
 VALUES
-   ('Alaskan National Wildlife Area or Online','2020-10-24 13:00:16-00','Mammal watch. Coastline conservation','www.cleanbeaches.com',0,2,1);
+   ('Alaskan National Wildlife Area or Online','2020-10-24 13:00:16-00','Mammal watch. Coastline conservation','www.cleanbeaches.com',null,2,1);
 
 INSERT INTO events
   (location,date_time,short_description,link,mammal_id,sponsor_id,veterinarian_id)
 VALUES
-   ('Jericho Beach Park or Online','2020-11-07 11:00:16-00','Beach Clean-up. Coastline conservation','www.cleanbeaches.com',0,1,4);
+   ('Jericho Beach Park or Online','2020-11-07 11:00:16-00','Beach Clean-up. Coastline conservation','www.cleanbeaches.com',null,1,4);
 
 INSERT INTO events
   (location,date_time,short_description,link,mammal_id,sponsor_id,veterinarian_id)
