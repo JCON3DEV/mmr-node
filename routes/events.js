@@ -14,7 +14,7 @@ const router = express.Router();
 module.exports = (db) => {
   router.get("/", (req, res) => {
     db.query(`SELECT * FROM events;`)
-      .then(data => {
+      .then((data) => {
         // console.log("This is events query data...*****....",data);
         const events = data.rows;
         res.json({ events });
@@ -27,20 +27,20 @@ module.exports = (db) => {
   });
   router.get("/:id", function (req, res, next) {
     // db.query to return all events associated with sponsor 1
-    db.query(`
+    db.query(
+      `
     SELECT * FROM events
     JOIN sponsors ON sponsors.id = events.sponsor_id
     WHERE sponsor_id = ${req.params.id}
-    `)
-    .then(data => {
-      const events = data.rows;
-      res.json({ events});
-    })
-    .catch(err => {
-      res
-        .status(500)
-        .json({error: err.message});
-    })
+    `
+    )
+      .then((data) => {
+        const events = data.rows;
+        res.json({ events });
+      })
+      .catch((err) => {
+        res.status(500).json({ error: err.message });
+      });
     // res.json("API is working properly");
   });
 
@@ -48,28 +48,22 @@ module.exports = (db) => {
     // db.query to go here
     res.json("API is working properly");
   });
-<<<<<<< HEAD
-  router.get("/:id/", function (req, res, next) {
-    // db.query to go here
-    res.json("API is working properly");
-=======
 
-  router.get(`/:id/uniqueevents`, (req,res) =>{
+  router.get(`/:id/uniqueevents`, (req, res) => {
     // db query to return events for specific mammals
-    db.query(`
+    db.query(
+      `
     SELECT * FROM events
     WHERE mammal_id = ${req.params.id}
-    `)
-    .then(data => {
-      const events = data.rows;
-      res.json({ events });
-    })
-    .catch(err => {
-      res
-      .status(500)
-      .json({error: err.message})
-    })
->>>>>>> master
+    `
+    )
+      .then((data) => {
+        const events = data.rows;
+        res.json({ events });
+      })
+      .catch((err) => {
+        res.status(500).json({ error: err.message });
+      });
   });
 
   return router;
