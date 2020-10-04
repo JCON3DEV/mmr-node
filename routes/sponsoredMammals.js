@@ -18,11 +18,12 @@ module.exports = (db) => {
 
   router.post("/:mammal_id", (req, res) => {
     // db insert query required for creating events
+    // below protects agans sql injection
     let query = `
       INSERT INTO sponsors_mammals(mammal_id, sponsor_id)
-      VALUES(${req.params.mammal_id}, 1);
+      VALUES($1, 1);
     `;
-    db.query(query)
+    db.query(query, [req.params.mammal_id])
       .then((data) => {
         const sonsoredMammals = data.rows;
         res.json({ sonsoredMammals });
