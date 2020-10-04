@@ -33,15 +33,19 @@ module.exports = (db) => {
 
   router.get("/:id", (req, res) => {
     // below needs query to select sponsor based on id
-    let query = ``;
-    // db.query(query)
-    //   .then((data) => {
-    //     const sponsor = data.rows.id;
-    //     res.json({ sponsor });
-    //   })
-    //   .catch((err) => {
-    //     res.status(500).json({ error: err.message });
-    //   });
+    let query = `
+    SELECT * FROM sponsors
+    JOIN sponsors ON sponsors.id = events.sponsor_id
+    WHERE sponsor_id = $1;
+    `;
+    db.query(query,[req.params.id])
+      .then((data) => {
+        const sponsor = data.rows.id;
+        res.json({ sponsor });
+      })
+      .catch((err) => {
+        res.status(500).json({ error: err.message });
+      });
     res.json("API is working properly. Need query for sponsor id search.");
   })
 

@@ -1,3 +1,10 @@
+-- Seal 0
+INSERT INTO mammals
+  (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic, sponsored)
+VALUES
+  ('SOS Donation',4,120, 'All of our seals need regular treatments and support. Your contribution has helped us Save Our Seals. Thank you','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','/docs/other/sealvector.png', true);
+
+
 -- Seal 1
 INSERT INTO mammals
   (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic, sponsored)
