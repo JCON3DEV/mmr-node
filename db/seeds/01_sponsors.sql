@@ -1,7 +1,7 @@
 INSERT INTO sponsors
   (id,sponsor_name, phone_number,email)
 VALUES
-  (1,'Serah', 16041231234, 'serah@email.com');
+  (1,'Brian', 16041231234, 'brian@email.com');
 INSERT INTO sponsors
   (id,sponsor_name, phone_number,email)
 VALUES
