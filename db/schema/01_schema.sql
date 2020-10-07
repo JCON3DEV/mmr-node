@@ -65,6 +65,7 @@ CREATE TABLE events
   location TEXT,
   date_time TIMESTAMPTZ NOT NULL,
   short_description TEXT,
+  long_description TEXT,
   link VARCHAR(255),
   mammal_id INTEGER REFERENCES mammals(id),
   sponsor_id INTEGER REFERENCES sponsors(id),

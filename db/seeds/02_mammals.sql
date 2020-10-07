@@ -9,7 +9,7 @@ VALUES
 INSERT INTO mammals
   (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic, sponsored)
 VALUES
-  ('Boris',4,120, 'Boris is an orphaned male seal pup; rescued near Kyuquot after being discovered by a member of the public. Believed to be just 5 months old, he weighed just 5.76 kg when he was admitted.','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','/images/Boris.png', true);
+  ('Boris',4,120, 'Boris is an orphaned male seal pup; rescued near Kyuquot after being discovered by a member of the public. Believed to be just 5 months old, he weighed just 5.76 kg when he was admitted.','2016-06-22 19:10:25-07','2016-09-01 20:15:20-00','/images/Boris.png', false);
 -- Seal 2
 INSERT INTO mammals
   (mammal_name,age,weight,bio,date_admitted,date_released,profile_pic, sponsored)
