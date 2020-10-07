@@ -40,6 +40,7 @@ CREATE TABLE mammals
   date_admitted TIMESTAMPTZ NOT NULL,
   date_released TIMESTAMPTZ NOT NULL,
   profile_pic VARCHAR(255) NOT NULL,
+  historic_link VARCHAR(255),
   sponsored BOOLEAN DEFAULT FALSE
 );
 
